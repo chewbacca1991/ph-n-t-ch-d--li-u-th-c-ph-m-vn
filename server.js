@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/food_data';
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
   .then(() => console.log('Successfully connected to MongoDB!'))
   .catch(err => console.error(err));
 
