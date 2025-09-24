@@ -1,7 +1,7 @@
 {
   "name": "phân-tích-dữ-liệu-thực-phẩm-vn",
   "version": "1.0.0",
-  "description": "Dự án phân tích dữ liệu thực phẩm tại Việt Nam",
+  "description": "Dự án phân tích dữ liệu thực phẩm và dinh dưỡng tại Việt Nam",
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
