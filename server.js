@@ -17,6 +17,11 @@ app.get('/', (req, res) => {
   res.send('Welcome to the food data analytics API!');
 });
 
+// Health check route
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
