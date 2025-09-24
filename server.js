@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -15,6 +16,7 @@ mongoose.connect(mongoURI, {
   .then(() => console.log('Connected to MongoDB at ' + mongoURI + ' successfully!'))
   .catch(err => console.error('MongoDB connection error to ' + mongoURI + ':', err));
 
+app.use(cors()); // Enable CORS for all requests
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
