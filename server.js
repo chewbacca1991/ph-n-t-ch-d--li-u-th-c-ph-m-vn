@@ -6,7 +6,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Kết nối đến MongoDB
-mongoose.connect('mongodb://localhost:27017/food_data', { useNewUrlParser: true, useUnifiedTopology: true })
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/food_data';
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Kết nối tới MongoDB thành công!'))
   .catch(err => console.error(err));
 
