@@ -12,8 +12,8 @@ mongoose.connect(mongoURI, {
   useUnifiedTopology: true,
   // Additional options can be added here if needed
 })
-  .then(() => console.log('Connected to MongoDB successfully!'))
-  .catch(err => console.error('MongoDB connection error:', err));
+  .then(() => console.log('Connected to MongoDB at ' + mongoURI + ' successfully!'))
+  .catch(err => console.error('MongoDB connection error to ' + mongoURI + ':', err));
 
 app.use(bodyParser.json());
 
